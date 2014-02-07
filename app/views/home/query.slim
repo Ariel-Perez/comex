@@ -1,0 +1,74 @@
+.page-header
+  h1
+    i class="fa fa-search"
+    |  Nueva Consulta
+
+.row
+  .col-lg-4
+
+    form role="form"
+      #accordion class="accordion panel panel-default"
+        .panel-heading
+          h4 class="panel-title"
+            i class="fa fa-edit"
+            |  Completa todos los pasos
+        .panel-body
+          .accordion-element data-toggle="minimize" data-parent="#accordion" href="#accordion-1"
+            span class="btn btn-primary btn-circle btn-lg btn-accordion"
+              | 1
+            #accordion-1-alt class="collapse content alt"
+              p
+                | Base de datos de Importaciones
+            #accordion-1 class="content"
+              label
+                | Que datos deseas analizar?
+              .form-group
+                .radio
+                  label
+                    input type="radio" name="optionsRadios" id="optionsRadios1" value="export" checked=""
+                      | Importaciones
+                .radio
+                  label
+                    input type="radio" name="optionsRadios" id="optionsRadios2" value="import"
+                      | Exportaciones
+          
+          hr
+          .accordion-element.minimized data-toggle="minimize" data-parent="#accordion" href="#accordion-2"
+            span class="btn btn-primary btn-circle btn-lg btn-accordion"
+              | 2
+            #accordion-2-alt.content.alt
+              p
+                | Hidden panel
+            #accordion-2.content
+              p
+                | HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages.<a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a>
+          hr
+          .accordion-element.minimized data-toggle="minimize" data-parent="#accordion" href="#accordion-3"
+            span class="btn btn-primary btn-circle btn-lg btn-accordion"
+              | 3
+            #accordion-3-alt.content.alt
+              p
+                | Hidden panel
+            #accordion-3.content
+              p
+                | HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages.<a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a>
+          br
+          hr
+          button class="btn btn-default btn-lg labeled pull-right" type="button" label="fa-search"
+            i class="fa fa-arrow-circle-right"
+            |  Realizar Consulta
+
+
+  .col-lg-8
+    .panel.panel-default
+      .panel-heading
+        h2 class="panel-title"
+          i class="fa fa-bar-chart-o"
+          |  Resultados
+    
+      .panel-body
+        | No hay resultados
+
+    .alert.alert-info
+      | Debes hacer una consulta para poder visualizar los resultados!
+

@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    title
+      | Comex
+    = stylesheet_link_tag    "application", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  body
+    #wrapper
+
+      /! Header
+      nav class="navbar navbar-default" role="navigation"
+        .container-fluid
+          /! Brand and toggle get grouped for better mobile display
+          .navbar-header
+            button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              span class="sr-only"
+                | Toggle navigation
+              span class="icon-bar"
+              span class="icon-bar"
+              span class="icon-bar"
+            = link_to 'home', :class => "navbar-brand" do
+              i class="fa fa-home"
+              |  Pagina de Inicio
+
+          /! Collect the nav links, forms, and other content for toggling
+          div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
+            ul class="nav navbar-nav"
+              li
+                = link_to 'consultas', :class => "item" do
+                  i class="fa fa-search"
+                  |  Consultas
+              li
+                = link_to 'historial', :class => "item" do
+                  i class="fa fa-list"
+                  |  Historial
+              li
+                = link_to 'ayuda', :class => "item" do
+                  i class="fa fa-question-circle"
+                  |  Ayuda
+
+            /! End main navbar
+
+            ul class="nav navbar-nav navbar-right"
+              form class="navbar-form navbar-left" role="search"
+                .input-group
+                  input type="text" class="form-control" placeholder="Busqueda en el sitio" name="search"
+                  span class="input-group-btn"
+                    button type="submit" class="btn btn-default"
+                      i class="fa fa-search"
+
+                      
+              li class="dropdown"
+                a href="" class="dropdown-toggle" data-toggle="dropdown"
+                  / User name goes here
+                  i class="fa fa-user"
+                  |  Usuario
+                  |  <b class="caret"></b>
+                ul class="dropdown-menu"
+                  li
+                    a href=""
+                      i class="fa fa-gear"
+                      |  Configuracion de Cuenta
+                  li class="divider"
+                  li
+                    = link_to 'inicio_sesion' do
+                      i class="fa fa-sign-out"
+                      |  Cerrar Sesion
+              /! End Dropdown
+            /! End right menu
+      /! End Header
+
+      /! Page content
+      #page-wrapper
+        = yield
+      /! End content

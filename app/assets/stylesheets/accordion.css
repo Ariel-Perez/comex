@@ -1,0 +1,120 @@
+.accordion.panel {
+  padding-bottom: 0px;
+}
+
+div.accordion {
+  counter-reset: item;
+}
+
+div.accordion:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+ }
+
+.accordion-element:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.accordion .content {
+  margin-left: 80px;
+}
+
+.accordion .content.alt p {
+  font-style: italic;
+}
+
+.accordion .accordion-element.minimized .content {
+  display: none;
+}
+.accordion .accordion-element.minimized .content.alt {
+  display: block;
+}
+
+.accordion .accordion-element.minimized {
+  cursor: pointer;
+}
+
+div.accordion .accordion-element.minimized .btn-accordion {
+  width: 30px;
+  height: 30px;
+
+  padding: 6px 0;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 1.428571429;
+  margin-left: 20px;
+
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+/* Circle Buttons */
+
+.accordion .btn-accordion {
+  outline: 0px;
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+  margin-left: 20px;
+  float: left;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.btn-accordion.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 12px 16px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-left: 10px;
+  float: left;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.btn-accordion.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 16px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-left: 0px;
+  float: left;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+
+.accordion-element.minimized .btn-accordion {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.accordion-element.minimized .btn-accordion:hover,
+.accordion-element.minimized .btn-accordion:focus,
+.accordion-element.minimized .btn-accordion:active {
+  color: #ffffff;
+  background-color: #47a447;
+  border-color: #398439;
+}
